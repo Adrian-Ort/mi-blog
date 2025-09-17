@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const champions = [
+  {
+    name: "Thresh",
+    role: "Support",
+    description: "El Carcelero que puede cambiar el rumbo de cualquier partida con sus hooks perfectos y su linterna salvadora.",
+    abilities: ["Death Sentence (Q)", "Dark Passage (W)", "Flay (E)", "The Box (R)"],
+    tips: "Usa tu linterna para salvar aliados y posiciónate bien para hooks decisivos"
+  },
+  {
+    name: "Sylas",
+    role: "Mid/Jungle",
+    description: "El revolucionario que roba las ultimates enemigas, convirtiendo la fuerza del enemigo en su propia arma.",
+    abilities: ["Petricite Burst (Q)", "Kingslayer (W)", "Abscond/Abduct (E)", "Hijack (R)"],
+    tips: "Identifica las mejores ultimates para robar y mantén tu combo E-W para escapar o all-in"
+  },
+  {
+    name: "Jinx",
+    role: "ADC",
+    description: "La Bala Perdida de Zaun que causa caos con sus armas explosivas y su sed de destrucción.",
+    abilities: ["Switcheroo! (Q)", "Zap! (W)", "Flame Chompers! (E)", "Super Mega Death Rocket! (R)"],
+    tips: "Gestiona bien tus armas: Pow-Pow para DPS sostenido, Fishbones para poke y teamfights"
+  }
+];
+---
+
+<Layout title="League of Legends - Mi Blog Gaming">
+  <h1>⚔️ League of Legends ⚔️</h1>
+  
+  <div style="text-align: center; margin-bottom: 3rem;">
+    <p style="font-size: 1.2rem; color: #333; line-height: 1.6;">
+      Mis campeones favoritos y las razones por las que dominan en el Rift
+    </p>
+  </div>
+
+  <div class="blog-grid">
+    {champions.map(champion => (
+      <article class="post-card" style="border-left: 4px solid #c89b3c;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h2 style="color: #c89b3c; margin: 0; font-size: 1.8rem;">{champion.name}</h2>
+          <span style="background: linear-gradient(45deg, #c89b3c 0%, #0f2027 100%); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.9rem; font-weight: bold;">
+            {champion.role}
+          </span>
+        </div>
+        
+        <p style="color: #555; margin-bottom: 1.5rem; line-height: 1.6;">
+          {champion.description}
+        </p>
+        
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="color: #333; margin-bottom: 0.5rem;">Habilidades:</h3>
+          <ul style="list-style: none; padding: 0;">
+            {champion.abilities.map(ability => (
+              <li style="background: #f8f9fa; padding: 0.3rem 0.8rem; margin-bottom: 0.3rem; border-radius: 10px; border-left: 3px solid #c89b3c;">
+                {ability}
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div style="background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 10px;">
+          <strong>💡 Tip Pro:</strong> {champion.tips}
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <div style="margin-top: 3rem; background: linear-gradient(45deg, #c89b3c 0%, #0f2027 100%); color: white; padding: 2rem; border-radius: 15px;">
+    <h2>¿Por qué estos campeones?</h2>
+    <p style="margin-top: 1rem; line-height: 1.6;">
+      Cada uno de estos campeones representa un aspecto diferente del juego que me apasiona: Thresh por su capacidad de hacer jugadas espectaculares, 
+      Sylas por su versatilidad y adaptabilidad, y Jinx por su potencial de carry explosivo. ¡Son la combinación perfecta de skill y diversión!
+    </p>
+  </div>
+</Layout>

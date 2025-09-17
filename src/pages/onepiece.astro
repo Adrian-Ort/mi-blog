@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const characters = [
+  {
+    name: "Roronoa Zoro",
+    epithet: "Cazador de Piratas / Rey Demonio",
+    description: "El espadachín de los tres estilos que sueña con convertirse en el mejor del mundo. Su lealtad hacia Luffy es inquebrantable.",
+    techniques: ["Santoryu (Tres Espadas)", "Kyutoryu (Nueve Espadas)", "Ittoryu (Una Espada)", "Nitoryu (Dos Espadas)"],
+    quote: "Nada pasó... absolutamente nada.",
+    bounty: "1.111.000.000 Berries"
+  },
+  {
+    name: "Portgas D. Ace",
+    epithet: "Puño de Fuego",
+    description: "El hermano adoptivo de Luffy y antiguo comandante de la 2ª división de los Piratas de Barba Blanca. Su sacrificio marcó un antes y después.",
+    techniques: ["Hiken (Puño de Fuego)", "Enkai (Llamas del Infierno)", "Juujika (Cruz de Fuego)", "Dai Enkai Entei (Gran Rey de Fuego)"],
+    quote: "Gracias por amarme... ¡No me arrepiento de haber vivido!",
+    bounty: "550.000.000 Berries"
+  }
+];
+---
+
+<Layout title="One Piece - Mi Blog Gaming">
+  <h1>🏴‍☠️ One Piece 🏴‍☠️</h1>
+  
+  <div style="text-align: center; margin-bottom: 3rem;">
+    <p style="font-size: 1.2rem; color: #333; line-height: 1.6;">
+      Mis personajes favoritos en la Gran Línea y lo que los hace especiales
+    </p>
+  </div>
+
+  <div class="blog-grid">
+    {characters.map(character => (
+      <article class="post-card" style="border-left: 4px solid #ff6b6b;">
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <h2 style="color: #ff6b6b; margin: 0; font-size: 2rem;">{character.name}</h2>
+          <p style="color: #666; font-style: italic; margin-top: 0.5rem;">"{character.epithet}"</p>
+        </div>
+        
+        <div style="background: linear-gradient(45deg, #ff6b6b 0%, #4ecdc4 100%); color: white; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem; text-align: center;">
+          <strong>Recompensa:</strong> {character.bounty}
+        </div>
+        
+        <p style="color: #555; margin-bottom: 1.5rem; line-height: 1.6; font-style: italic; text-align: center; background: #f8f9fa; padding: 1rem; border-radius: 10px;">
+          "{character.quote}"
+        </p>
+        
+        <p style="color: #555; margin-bottom: 1.5rem; line-height: 1.6;">
+          {character.description}
+        </p>
+        
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="color: #333; margin-bottom: 0.5rem;">Técnicas Signature:</h3>
+          <div style="display: grid; grid-template-columns: 1fr; gap: 0.3rem;">
+            {character.techniques.map(technique => (
+              <div style="background: linear-gradient(45deg, #ff6b6b 0%, #4ecdc4 100%); color: white; padding: 0.5rem 1rem; border-radius: 20px; text-align: center; font-weight: bold;">
+                {technique}
+              </div>
+            ))}
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <div style="margin-top: 3rem; background: linear-gradient(45deg, #ff6b6b 0%, #4ecdc4 100%); color: white; padding: 2rem; border-radius: 15px;">
+    <h2>El Legado de los Grandes</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem;">
+      <div>
+        <h3>🗡️ Zoro - El Futuro WSS</h3>
+        <p style="line-height: 1.6;">
+          Su dedicación al entrenamiento y su lealtad inquebrantable hacia su capitán lo convierten en uno de los personajes más respetables del anime. 
+          Cada cicatriz cuenta una historia de sacrificio y determinación.
+        </p>
+      </div>
+      <div>
+        <h3>🔥 Ace - El Corazón Ardiente</h3>
+        <p style="line-height: 1.6;">
+          Aunque su vida fue corta, su impacto fue inmenso. Su sacrificio en Marineford demostró el verdadero significado del amor fraternal 
+          y marcó el crecimiento de Luffy como pirata.
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>

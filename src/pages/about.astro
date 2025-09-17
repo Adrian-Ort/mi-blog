@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Acerca de - Mi Blog Gaming">
+  <h1>👋 Sobre Mí</h1>
+  
+  <div style="background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <div style="width: 120px; height: 120px; background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+        🎮
+      </div>
+      <h2 style="color: #333; margin: 0;">¡Hola, soy un Gamer Apasionado!</h2>
+    </div>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; color: #555; text-align: center; margin-bottom: 2rem;">
+      Bienvenido a mi rincón personal en internet donde comparto mis dos grandes pasiones: 
+      <strong style="color: #c89b3c;">League of Legends</strong> y <strong style="color: #ff6b6b;">One Piece</strong>.
+    </p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+    <div style="background: linear-gradient(135deg, #c89b3c 0%, #0f2027 100%); color: white; padding: 2rem; border-radius: 15px;">
+      <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+        ⚔️ League of Legends
+      </h3>
+      <ul style="list-style: none; padding: 0; line-height: 1.6;">
+        <li style="margin-bottom: 0.5rem;">🎯 <strong>Rol favorito:</strong> Support/Mid</li>
+        <li style="margin-bottom: 0.5rem;">🏆 <strong>Elo actual:</strong> Gold/Platinum</li>
+        <li style="margin-bottom: 0.5rem;">⭐ <strong>Campeones main:</strong> Thresh, Sylas, Jinx</li>
+        <li style="margin-bottom: 0.5rem;">🎮 <strong>Años jugando:</strong> +5 años</li>
+      </ul>
+    </div>
+    
+    <div style="background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%); color: white; padding: 2rem; border-radius: 15px;">
+      <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+        🏴‍☠️ One Piece
+      </h3>
+      <ul style="list-style: none; padding: 0; line-height: 1.6;">
+        <li style="margin-bottom: 0.5rem;">📚 <strong>Estado:</strong> Al día con manga y anime</li>
+        <li style="margin-bottom: 0.5rem;">❤️ <strong>Personajes favoritos:</strong> Zoro, Ace</li>
+        <li style="margin-bottom: 0.5rem;">🏝️ <strong>Arco favorito:</strong> Marineford/Wano</li>
+        <li style="margin-bottom: 0.5rem;">🗓️ <strong>Fan desde:</strong> 2010</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+    <h3 style="text-align: center; margin-bottom: 1.5rem;">🎯 ¿Por qué este blog?</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div>
+        <h4 style="margin-bottom: 1rem;">📝 Mi Misión</h4>
+        <p style="line-height: 1.6;">
+          Compartir conocimientos, estrategias y análisis profundos sobre los universos que más me apasionan. 
+          Quiero crear contenido útil tanto para nuevos jugadores/fans como para veteranos.
+        </p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 1rem;">🤝 Comunidad</h4>
+        <p style="line-height: 1.6;">
+          Creo firmemente en el poder de la comunidad. A través de este blog, espero conectar con otros fans 
+          y crear un espacio donde podamos intercambiar ideas y celebrar nuestras pasiones comunes.
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @media (max-width: 768px) {
+    div[style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>

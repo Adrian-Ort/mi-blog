@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const posts = [
+  {
+    title: "Thresh: El Carcelero Sádico",
+    excerpt: "Descubre por qué Thresh es uno de los supports más temidos y versátiles de League of Legends.",
+    category: "LoL",
+    link: "https://www.leagueoflegends.com/es-mx/champions/thresh"
+  },
+  {
+    title: "Sylas: El Usurpador de Magias",
+    excerpt: "Análisis completo de Sylas, el campeón que puede robar las ultimates enemigas.",
+    category: "LoL",
+    link: "https://www.leagueoflegends.com/es-mx/champions/sylas"
+  },
+  {
+    title: "Jinx: La Bala Perdida",
+    excerpt: "Guía para dominar a Jinx y causar estragos en el bot lane.",
+    category: "LoL",
+    link: "https://www.leagueoflegends.com/es-mx/champions/jinx"
+  },
+  {
+    title: "Roronoa Zoro: El Espadachín de los Tres Estilos",
+    excerpt: "El camino del futuro espadachín más fuerte del mundo.",
+    category: "One Piece",
+    link: "https://onepiece.fandom.com/es/wiki/Roronoa_Zoro"
+  },
+  {
+    title: "Portgas D. Ace: El Puño de Fuego",
+    excerpt: "La trágica pero heroica historia del hermano adoptivo de Luffy.",
+    category: "One Piece",
+    link: "https://onepiece.fandom.com/es/wiki/Portgas_D._Ace"
+  }
+];
+---
+
+<Layout title="Mi Blog Gaming - LoL & One Piece">
+  <h1>🎮 Mi Blog Gaming 🏴‍☠️</h1>
+  
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <p style="font-size: 1.2rem; color: #333; line-height: 1.6;">
+      ¡Bienvenido a mi blog dedicado a mis pasiones: <strong>League of Legends</strong> y <strong>One Piece</strong>!
+      Aquí encontrarás guías, análisis y tributos a mis personajes favoritos.
+    </p>
+  </div>
+
+  <div class="blog-grid">
+    {posts.map(post => (
+      <article class="post-card">
+        <div style={`background: ${post.category === 'LoL' ? 'linear-gradient(45deg, #c89b3c 0%, #0f2027 100%)' : 'linear-gradient(45deg, #ff6b6b 0%, #4ecdc4 100%)'}; color: white; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-weight: bold;`}>
+          {post.category}
+        </div>
+        <h2 class="post-title">{post.title}</h2>
+        <p class="post-excerpt">{post.excerpt}</p>
+        <a href={post.link} class="read-more">Leer más →</a>
+      </article>
+    ))}
+  </div>
+
+  <div style="margin-top: 3rem; text-align: center; background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 15px;">
+    <h2>¿Por qué este blog?</h2>
+    <p style="margin-top: 1rem; line-height: 1.6;">
+      Como fan apasionado de League of Legends y One Piece, quería compartir mis conocimientos y amor por estos universos increíbles. 
+      Desde estrategias para climbing en LoL hasta análisis profundos de personajes de One Piece, ¡aquí encontrarás de todo!
+    </p>
+  </div>
+</Layout>
